@@ -1,3 +1,8 @@
+Trabalho elaborado em dupla
+
+Rahyan Ramos de Oliveira
+Renata Lima Lopes Castellan
+
 # ZIP Breaker
 
 Aplicação Python para recuperar a senha de **seus próprios arquivos ZIP** por
