@@ -147,3 +147,21 @@ wordlist. Senhas fortes e ausentes da lista não são “descriptografadas”. O
 programa assume a configuração usual em que todos os membros protegidos do ZIP
 usam a mesma senha e valida um membro protegido completo (CRC no ZipCrypto e
 autenticação HMAC no AES).
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+## Uso pela interface gráfica (GUI)
+
+Com o ambiente virtual ativo e o projeto instalado (`pip install -e .`),
+execute na raiz do projeto:
+
+```powershell
+python gui.py
+```
+
+A janela permite selecionar o arquivo ZIP e a wordlist, acompanhar o
+progresso e, opcionalmente, extrair o conteúdo quando a senha for
+encontrada. Os botões Pausar/Retomar/Cancelar controlam a execução, que
+roda em uma thread separada para não travar a interface.
+
+No Linux, pode ser necessário instalar o Tkinter: `sudo apt install python3-tk`.
