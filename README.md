@@ -1,7 +1,8 @@
-Trabalho elaborado em dupla
+Trabalho realizado em dupla
 
-Rahyan Ramos de Oliveira
-Renata Lima Lopes Castellan
+#Rahyan Ramos de Oliveira
+
+#Renata Lima Lopes Castellan
 
 # ZIP Breaker
 
