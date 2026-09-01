@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zip-breaker-educacional"
+version = "1.0.0"
+description = "Recuperador educacional de senhas de arquivos ZIP por wordlist"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyzipper>=0.3.6,<0.4",
+]
+
+[project.scripts]
+zip-breaker = "zip_breaker.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
