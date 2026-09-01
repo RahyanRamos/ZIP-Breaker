@@ -1,4 +1,4 @@
-# ZIP Breaker Educacional
+# ZIP Breaker
 
 Aplicação Python para recuperar a senha de **seus próprios arquivos ZIP** por
 ataque de dicionário (wordlist). O projeto foi organizado para uma atividade de
@@ -65,6 +65,31 @@ Consulte todas as opções com `zip-breaker --help`. Os códigos de saída são:
 - `2`: entrada inválida ou erro controlado;
 - `130`: interrupção pelo teclado (`Ctrl+C`).
 
+## Exemplo pronto para execução
+
+O diretório `exemplos/` contém um cenário completo para validar a aplicação:
+
+- `arquivo_teste.zip`: arquivo protegido com criptografia AES-256;
+- `wordlist.txt`: lista com 20 possíveis senhas;
+- senha correta para conferência: `CyberSeguranca2026!`.
+
+Na raiz do projeto, ative o ambiente virtual e execute:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+zip-breaker ".\exemplos\arquivo_teste.zip" ".\exemplos\wordlist.txt"
+```
+
+A aplicação deve encontrar a senha na 16ª tentativa. Para validar também a
+extração do conteúdo:
+
+```powershell
+zip-breaker ".\exemplos\arquivo_teste.zip" ".\exemplos\wordlist.txt" --extrair-para ".\exemplos\recuperado"
+```
+
+Após a execução, o arquivo `mensagem_teste.txt` estará dentro de
+`exemplos/recuperado/`.
+
 ## Testes
 
 A suíte usa `unittest`, incluído no Python:
@@ -73,7 +98,7 @@ A suíte usa `unittest`, incluído no Python:
 python -m unittest discover -s tests -v
 ```
 
-## Integração com uma futura GUI
+## Integração com uma GUI
 
 Exemplo mínimo da API independente de interface:
 
